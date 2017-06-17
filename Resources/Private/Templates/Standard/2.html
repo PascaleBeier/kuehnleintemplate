@@ -1,0 +1,191 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+      f:schemaLocation="https://fluidtypo3.org/schemas/fluid-master.xsd"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers
+      http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:comment>
+    Dieses Template wird für alle Seiten benutzt, die das Backend-Layout "Startseite"
+    im Erscheinungsbild in den Seiteneigenschaften auswählen.
+</f:comment>
+
+<f:section name="Main">
+
+    <f:comment>
+        Unter <f:link.page pageUid="x">Link</f:link.page> Jeweils die ID der gewünschten Seite angeben
+        auf die der Link zeigen soll.
+    </f:comment>
+
+    <div class="homepage_features">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <f:link.page pageUid="3" class="panel panel-default">
+                        <i class="fa fa-industry"></i>
+                        <p>Das Unternehmen</p>
+                    </f:link.page>
+                </div>
+
+                <div class="col-md-4">
+                    <f:link.page pageUid="3" class="panel panel-default">
+                        <i class="fa fa-users"></i>
+                        <p>Unser Team stellt sich vor</p>
+                    </f:link.page>
+                </div>
+
+                <div class="col-md-4">
+                    <f:link.page pageUid="3" class="panel panel-default">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <p>Unsere Spezialgebiete</p>
+                    </f:link.page>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <v:variable.set name="textBelowSlider" value="{v:content.get(column: 1, limit: 1, pageUid: data.uid)}" />
+
+    <div class="container">
+        <section class="homepage-below-slider">
+            <h3><f:format.raw>{textBelowSlider.0.header}</f:format.raw></h3>
+            <f:format.raw>{textBelowSlider.0.bodytext}</f:format.raw>
+        </section>
+    </div>
+
+    <v:variable.set name="threeColumnText" value="{v:content.get(column: 2, limit: 3, pageUid: data.uid)}" />
+
+    <div class="homepage-three-column-text">
+        <div class="container">
+            <div class="row">
+
+                <f:for each="{threeColumnText}" as="column" iteration="i">
+                    <div class="col-md-4">
+                        <f:if condition="{i.isFirst}">
+                            <f:then>
+                                <i class="fa fa-lightbulb-o"></i>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{i.isLast}">
+                                    <f:then>
+                                        <i class="fa fa-file-text-o"></i>
+                                    </f:then>
+                                    <f:else>
+                                        <i class="fa fa-cogs"></i>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+
+                        <h3><f:format.raw>{column.header}</f:format.raw></h3>
+                        <p><f:format.raw>{column.bodytext}</f:format.raw></p>
+                    </div>
+                </f:for>
+
+            </div>
+        </div>
+
+    </div>
+
+    <v:variable.set name="portrait" value="{v:content.get(column: 3, limit: 1, pageUid: data.uid)}" />
+
+    <div class="homepage-portrait">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <h3><f:format.raw>{portrait.0.header}</f:format.raw></h3>
+                    <p><f:format.raw>{portrait.0.bodytext}</f:format.raw></p>
+                    <a class="btn btn-primary">Mehr erfahren!</a>
+                </div>
+                <div class="col-md-6">
+                    <img class="pull-right" height="400px" src="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/portrait.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <v:variable.set name="aboutUs" value="{v:content.get(column: 4, limit: 1, pageUid: data.uid)}" />
+
+    <div class="homepage-about-us">
+        <div class="container">
+            <span aria-hidden="true">{aboutUs.0.header}</span>
+            <h3><f:format.raw>{aboutUs.0.header}</f:format.raw></h3>
+            <p><f:format.raw>{aboutUs.0.bodytext}</f:format.raw></p>
+        </div>
+    </div>
+
+    <v:variable.set name="threeColumns" value="{v:content.get(column: 5, limit: 3, pageUid: data.uid)}" />
+
+    <div class="homepage-three-columns-two">
+        <div class="container">
+            <div class="row">
+                <f:for each="{threeColumns}" as="column">
+                    <div class="col-md-4">
+                        <h4><f:format.raw>{column.header}</f:format.raw></h4>
+                        <p><f:format.raw>{column.bodytext}</f:format.raw></p>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="play-imagefilm" onclick="$('.imagefilm').modal('show')">
+        <div class="container">
+            <i class="fa fa-play-circle" aria-hidden="true"></i>
+            <h3>Sehen Sie sich unser Video an!</h3>
+            <p>Mit hochwertigen farben Versiegelungen und Kunstharzbeschichtungen liefern wir Ihnen
+            ausgereifte Lösungen für Kellerbeschichtungen.</p>
+        </div>
+    </section>
+
+    <div class="modal fade imagefilm" tabindex="-1" role="dialog" aria-labelledby="imagefilmLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="imagefilmLabel">Wir stellen uns vor</h4>
+                </div>
+                <div class="modal-body">
+                    <v:media.video width="100%" height="auto" controls="true" src="typo3conf/ext/kuehnleintemplate/Resources/Public/Videos/Imagefilm.mp4"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</f:section>
+
+<f:section name="PrependFooter">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14427.331476937332!2d9.831050612135513!3d50.26549107079926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a3207cf78781f1%3A0x6b48bc5dea1761e3!2sIm+M%C3%A4rzgrund+9%2C+97795+Schondra!5e0!3m2!1sde!2sde!4v1497693390269"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div class="homepage-address">
+        <div class="container">
+            <div class="col-md-4">
+                <h4>Adresse</h4>
+                <p class="text-muted">{settings.clientAddress}</p>
+            </div>
+            <div class="col-md-4">
+                <h4>E-Mail</h4>
+                <p class="text-muted">{settings.clientEmail}</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Telefon</h4>
+                <p class="text-muted">{settings.sexyClientPhone}</p>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+
+</html>

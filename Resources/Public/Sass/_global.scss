@@ -1,0 +1,12 @@
+.btn-primary {
+  text-transform: uppercase;
+}
+.navbar {
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar.navbar-collapse {
+    float: right;
+  }
+}

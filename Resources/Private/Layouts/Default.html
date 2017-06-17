@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+      f:schemaLocation="https://fluidtypo3.org/schemas/fluid-master.xsd"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers
+      http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+
+    <header>
+        <f:render partial="Header" />
+    </header>
+
+    <v:variable.set name="slider" value="{v:content.get(limit:'1', pageUid: data.uid)}" />
+
+    <main>
+    <f:if condition="{slider.0.bodytext}">
+        <v:variable.set name="image" value="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/slider_{data.uid}.jpg" />
+        <f:render partial="Slider" arguments="{data: data, image: image, slider: slider.0}" />
+    </f:if>
+
+    <f:render section="Main" />
+    </main>
+
+    <footer>
+        <f:render section="PrependFooter" optional="true" />
+        <f:render partial="Footer" />
+    </footer>
+
+</f:spaceless>

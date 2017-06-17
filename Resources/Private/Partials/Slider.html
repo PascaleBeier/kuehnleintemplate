@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+      f:schemaLocation="https://fluidtypo3.org/schemas/fluid-master.xsd"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers
+      http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <section class="slider" style="background-image: url({image});">
+        <div class="container">
+            <div class="inner">
+                <h1><f:format.raw>{slider.header}</f:format.raw></h1>
+                <f:format.html>{slider.bodytext}</f:format.html>
+                <f:if condition="{slider.header_link}">
+                    <f:then>
+                        <p>
+                            <v:link.typolink configuration="{parameter: slider.header_link, additionalParams: class: 'btn btn-primary'}">
+                                Mehr Erfahren
+                            </v:link.typolink>
+                        </p>
+                    </f:then>
+                </f:if>
+
+            </div>
+        </div>
+    </section>
