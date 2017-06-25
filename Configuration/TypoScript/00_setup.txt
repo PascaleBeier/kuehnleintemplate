@@ -3,6 +3,10 @@ config.renderCharset = utf-8
 
 page = PAGE
 
+page.bodyTag >
+page.bodyTagCObject = TEXT
+page.bodyTagCObject.dataWrap = <body id="p{field:uid}">
+
 page {
     10 = FLUIDTEMPLATE
     10 {
