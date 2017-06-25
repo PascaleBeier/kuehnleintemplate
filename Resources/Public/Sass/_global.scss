@@ -45,10 +45,13 @@ li.list-group-item a {
   padding-bottom: $spacer * 2;
 }
 
+.maincontent .frame-type-textpic {
+  padding: $spacer;
+
+}
+
 .maincontent {
   background: #fff;
-
-  padding: $spacer;
 
   h2 {
     margin-top: 0;
@@ -66,4 +69,43 @@ li.list-group-item a {
 
 img {
   @extend .img-responsive;
+}
+
+.ce-gallery img {
+  transition: all .3s linear;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.ce-gallery[data-ce-columns='1'] {
+  width: 100%;
+
+  .ce-row,
+  .ce-column,
+  .image,
+  img {
+    width: 100% !important;
+  }
+
+  &:first-of-type {
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.ce-gallery[data-ce-columns='2'] {
+  width: 100%;
+
+  .ce-column {
+    width: 49%;
+  }
+
+  .image,
+  img {
+    width: 100%;
+  }
 }
