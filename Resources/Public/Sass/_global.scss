@@ -110,8 +110,13 @@ img {
   }
 }
 
-body#20 {
+body#p20 {
   .slider {
     height: 500px;
+
+    h1,
+    p {
+      display: none;
+    }
   }
 }
