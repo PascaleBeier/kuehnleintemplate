@@ -62,5 +62,8 @@ li.list-group-item a {
   h6 {
     color: $navbar-default-link-active-bg;
   }
+}
 
+img {
+  @extend .img-responsive;
 }
