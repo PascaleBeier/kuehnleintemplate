@@ -13,6 +13,18 @@ let mix = require('laravel-mix');
 
 mix.options({ processCssUrls: false });
 
+mix.webpackConfig({
+    resolve: {
+        alias: {
+            'jquery.smartmenus': 'smartmenus'
+        }
+    }
+});
+
+mix.autoload({
+    jquery: ['jQuery', '$', 'window.jQuery']
+});
+
 mix.js('Resources/Public/Es6/vendor.js', 'resources/Public/Js/vendor.min.js')
     .sass('Resources/Public/Sass/vendor.scss', 'resources/Public/Css/vendor.min.css')
     .copy('node_modules/font-awesome/fonts/', 'resources/Public/Fonts/');
