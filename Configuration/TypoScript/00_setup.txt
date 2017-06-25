@@ -1,0 +1,56 @@
+config.contentObjectExceptionHandler = 0
+config.renderCharset = utf-8
+
+page = PAGE
+
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap {
+            cObject = TEXT
+            cObject {
+                data = levelfield:-2,backend_layout_next_level,slide
+                override.field = backend_layout
+            }
+            ifEmpty = Default
+        }
+        # Template
+        layoutRootPaths {
+            10 = EXT:kuehnleintemplate/Resources/Private/Layouts
+        }
+        partialRootPaths {
+            10 = EXT:kuehnleintemplate/Resources/Private/Partials
+        }
+        templateRootPaths {
+            10 = EXT:kuehnleintemplate/Resources/Private/Templates
+        }
+        settings {
+            # Informationen für Copyright
+            copyrightYear = 2017
+            clientName = Günter Kühnlein GmbH
+            # Kontaktinformationen für den Header
+            clientEmail = info@kuehnlein.de
+            clientPhone = +499747481
+            sexyClientPhone = +49 (0)9747-481
+            # Wird für die Kartendarstellung verwendet
+            clientAddress = Im Märzgrund 9, 97795 Schondra
+            maps = AIzaSyBGxnpu4Gv8gKJt4Z3MqohcD399zvcH8oc
+        }
+
+    }
+    includeCSSLibs {
+        vendor = EXT:kuehnleintemplate/Resources/Public/Css/vendor.min.css
+        vendor.forceOnTop = 1
+        googlewebfont = https://fonts.googleapis.com/css?family=Open+Sans:300,400,700
+        googlewebfont {
+            external = 1
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+    }
+    includeJSFooterlibs.10 = EXT:kuehnleintemplate/Resources/Public/Js/vendor.min.js
+}
+
+slider < styles.content.get
+slider.select.where = colPos = 1

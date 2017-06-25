@@ -1,0 +1,14 @@
+subnav = HMENU
+subnav {
+
+    entryLevel = -2
+    1 = TMENU
+    1 {
+        expAll = 1
+        NO = 1
+        NO.linkWrap = <li class="list-group-item">|</li>
+        NO.ATagTitle.field = abstract // description // title
+    }
+    stdWrap.dataWrap = <li class="list-group-item active">{leveltitle : -2}</li>
+    wrap = <ul class="list-group">|</ul>
+}
