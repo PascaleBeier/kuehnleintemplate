@@ -15,39 +15,8 @@
 </f:comment>
 
 <f:section name="Main">
-    <div id="homepage">
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img style="width: 100%" src="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/slider_2.jpg" alt="Bodenbeschichtung">
-                    <div class="carousel-content">
-                        <h3>Bodenbeschichtung</h3>
-                        <p>Kühnlein ist der Experte für innovative Bodenbeläge. Guter Schallschutz und und effiziente Wärmedämmung werden durch unsere speziellen Bodenbeschichtungen gewährleistet</p>
-                        <a class="btn btn-primary" href="index.php?id=4">Mehr erfahren!</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img  style="width: 100%" src="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/slider_2.jpg" alt="Trockenbau">
-                    <div class="carousel-content">
-                        <h3>Trockenbau</h3>
-                        <p>Die optimale Abdichtung und Isolierung sind Grundlegend für den Schutz gegen Feuchtigkeit und andere äußere Einflüsse, die Ihre Bausubstanz nachhaltig schädigen können.</p>
-                        <a class="btn btn-primary" href="index.php?id=5">Mehr erfahren!</a>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <img style="width: 100%" src="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/slider_2.jpg" alt="Trockenbau">
-                    <div class="carousel-content">
-                        <h3>Thermografie</h3>
-                        <p>Wir verfügen über modernste Gebäudediagnostik. Mit ihr werden Schwachstellen in der Dämmung Ihres Gebäudes schnell erkannt.</p>
-                        <a class="btn btn-primary" href="index.php?id=6">Mehr erfahren!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="homepage-slider" style="background-image: url(typo3conf/ext/kuehnleintemplate/Resources/Public/Images/slider_1.jpg); min-height: 400px !important;">
+    </div>
 
     <f:comment>
         Unter <f:link.page pageUid="x">Link</f:link.page> Jeweils die ID der gewünschten Seite angeben
@@ -61,21 +30,25 @@
                 <div class="col-md-4">
                     <f:link.page pageUid="4" class="panel panel-default">
                         <i class="fa fa-industry"></i>
-                        <p>Bodenbeschichtungen</p>
+                        <p><strong>Bodenbeschichtungen</strong></p>
+                        <p>Kühnlein ist der Experte für innovative Bodenbeläge. Guter Schallschutz und und effiziente Wärmedämmung werden durch unsere speziellen Bodenbeschichtungen gewährleistet</p>
                     </f:link.page>
                 </div>
 
                 <div class="col-md-4">
                     <f:link.page pageUid="5" class="panel panel-default">
                         <i class="fa fa-users"></i>
-                        <p>Trockenbau</p>
+                        <p><strong>Trockenbau</strong></p>
+                        <p>Die optimale Abdichtung und Isolierung sind Grundlegend für den Schutz gegen Feuchtigkeit und andere äußere Einflüsse, die Ihre Bausubstanz nachhaltig schädigen können.
+                        </p>
                     </f:link.page>
                 </div>
 
                 <div class="col-md-4">
                     <f:link.page pageUid="6" class="panel panel-default">
                         <i class="fa fa-lightbulb-o"></i>
-                        <p>Thermographie</p>
+                        <p><strong>Thermographie</strong></p>
+                        <p>Wir verfügen über modernste Gebäudediagnostik. Mit ihr werden Schwachstellen in der Dämmung Ihres Gebäudes schnell erkannt.</p>
                     </f:link.page>
                 </div>
 
