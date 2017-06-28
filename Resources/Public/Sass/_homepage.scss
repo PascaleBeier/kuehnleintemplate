@@ -16,6 +16,12 @@
 
 
   a {
+    @media (min-width: 768px) {
+      position: absolute;
+      bottom: 15px;
+      left: 30%;
+    }
+
     &:hover {
       text-decoration: none;
       background: $navbar-default-link-active-bg;
@@ -115,6 +121,10 @@
   background: url(../Images/world_map.svg) repeat-x;
 
   margin: $spacer * 4 0;
+
+  a {
+    margin-bottom: $spacer;
+  }
 
   h3 {
     margin-top: $spacer / 3;
