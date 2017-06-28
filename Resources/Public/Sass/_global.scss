@@ -124,10 +124,11 @@ body#p20 {
 .dropdown-menu {
   box-shadow: none !important;
   border: 0 !important;
-  text-transform: none !important;
-
+  li {
+    line-height: 25px;
+  }
   a {
-    padding-bottom: 15px;
+    font-size: .8em;
   }
 }
 
