@@ -11,7 +11,7 @@
   }
 }
 .two-column {
-  margin: $spacer * 4 0;
+  margin: $spacer * 2 0;
 }
 
 .list-group-item {
@@ -31,7 +31,7 @@
   font-weight: 700;
   font-size: 1.4em;
   padding-top: $spacer;
-  padding-bottom: $spacer;
+  padding-bottom: 0;
 }
 li.list-group-item a {
   border-top: 1px solid #dedede;
