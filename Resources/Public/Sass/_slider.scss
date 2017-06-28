@@ -16,11 +16,16 @@
     font-weight: 700;
   }
 
-  @media (min-width: 768px) {
-    .inner {
-      position: absolute;
-      top: 24%;
+  .inner {
+
+    p {
+      font-size: 1.3em;
     }
-  }
+
+   @media (min-width: 768px) {
+     position: absolute;
+     top: 24%;
+   }
+ }
 
 }
