@@ -3,6 +3,7 @@
   line-height: 70px;
   color: #bbbcbe;
   font-weight: 300;
+  background: #fff;
 
   nav {
     @media (min-width: 768px) {
@@ -41,7 +42,7 @@
   }
 
   a {
-    font-size: .87em;
+    font-size: .8em;
     text-transform: uppercase;
 
     &:hover {
