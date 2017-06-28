@@ -8,6 +8,11 @@
 }
 
 .homepage_features {
+
+  @media (max-width: 767px) {
+    margin-top: 25px;
+  }
+
   strong {
     color: $navbar-default-link-active-bg;
   }
@@ -21,6 +26,10 @@
 
 
   a {
+    @media (max-width: 767px) {
+      display: block;
+      margin: 10px auto;
+    }
     @media (min-width: 768px) {
       position: absolute;
       bottom: 15px;

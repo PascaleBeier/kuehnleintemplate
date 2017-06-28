@@ -58,10 +58,15 @@
       margin-top: -65px;
     }
   }
+}
 
-  @media (max-width: 767px) {
-    .navbar-header {
-      min-height: 148px;
-    }
+button.navbar-toggle {
+  position: absolute;
+  right: -3px;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-collapse {
+    background: #c3c9bf;
   }
 }
