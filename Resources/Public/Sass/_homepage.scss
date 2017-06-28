@@ -1,0 +1,160 @@
+#homepage {
+  .slider {
+    h3,
+    p {
+      display: none;
+    }
+  }
+}
+
+.homepage_features {
+  @media (min-width: 768px) {
+    margin-top: -100px;
+  }
+  text-align: center;
+
+
+
+  a {
+    &:hover {
+      text-decoration: none;
+      background: $navbar-default-link-active-bg;
+      border-color: $navbar-default-link-active-bg;
+      transition: all .2s ease-in-out;
+    }
+    &:hover i,
+    &:hover p {
+      color: #fff;
+    }
+  }
+
+  .panel {
+    display: flex;
+    height: 300px;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    border-radius: 0;
+  }
+
+  i {
+    font-size: 42px;
+    flex-basis: 100%;
+    color: $navbar-default-link-active-bg;
+  }
+
+  p {
+    flex-basis: 100%;
+    margin-top: 10px;
+    font-weight: 300;
+    color: $gray-light;
+  }
+
+  p:last-of-type {
+    padding: 0 25px;
+  }
+
+}
+
+.play-imagefilm {
+  margin: $spacer * 4 0;
+  padding: $spacer * 2 0;
+  background: $navbar-default-bg;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+
+  i {
+    font-size: 8rem;
+  }
+
+}
+
+.homepage-address {
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  font-size: .9em;
+  text-align: center;
+  margin-top: $spacer * 4;
+}
+
+.homepage-below-slider {
+  text-align: center;
+  margin: $spacer * 4 0;
+
+  h3 {
+    color: $navbar-default-link-active-bg;
+  }
+
+}
+
+.homepage-three-column-text {
+  text-align: center;
+
+  h3 {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+  i {
+    color: $navbar-default-link-active-bg;
+    font-size: 2em;
+  }
+
+  p {
+    @extend .text-muted;
+    font-size: .9em;
+  }
+}
+
+.homepage-portrait {
+
+  background: url(../Images/world_map.svg) repeat-x;
+
+  margin: $spacer * 4 0;
+
+  h3 {
+    margin-top: $spacer / 3;
+  }
+
+  a.btn-primary {
+    display: inline-block;
+    margin-top: $spacer;
+  }
+
+  i {
+    color: $navbar-default-link-active-bg;
+    font-size: 3em;
+  }
+
+}
+
+.homepage-about-us {
+  span {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-block;
+      font-size: 12em;
+      font-weight: 700;
+      color: #eee;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -99;
+      margin-top: -69px;
+    }
+  }
+
+
+
+  margin: $spacer * 4 0;
+  text-align: center;
+
+  h3 {
+    color: $navbar-default-link-active-bg;
+  }
+
+}

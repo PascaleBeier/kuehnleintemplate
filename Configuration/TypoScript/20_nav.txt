@@ -1,0 +1,79 @@
+nav = HMENU
+nav {
+    entryLevel = 0
+    1 = TMENU
+    1 {
+        expAll = 1
+        NO = 1
+        NO.linkWrap = <li>|</li>
+        NO.ATagTitle.field = abstract // description // title
+        ACT = 1
+        ACT.linkWrap = <li class="active">|</li>
+        ACT.ATagTitle.field = abstract // description // title
+
+        CUR < .NO
+        CUR {
+          wrapItemAndSub = <li class="active">|</li>
+        }
+
+        IFSUB = 1
+        IFSUB {
+          ATagTitle.field = title
+          ATagParams = class="sub-arrow"
+          linkWrap = |<span class="caret"></span>
+          ATagBeforeWrap = 1
+          wrapItemAndSub = <li>|</li>
+        }
+
+        CURIFSUB < .IFSUB
+        CURIFSUB {
+          wrapItemAndSub = <li class="active">|</li>
+        }
+
+        ACT < .CUR
+        ACTIFSUB < .CURIFSUB
+
+        SPC = 1
+        SPC {
+          wrapItemAndSub.cObject = COA
+          wrapItemAndSub.cObject {
+            // no divider, if first menu item on this level:
+            10 = TEXT
+            10.value = <li class="dropdown-header">|</li>
+            10.if.value.data = register:count_MENUOBJ
+            10.if.equals = 1
+
+            // otherwise:
+            20 = TEXT
+            20.value = <li class="divider"></li><li class="dropdown-header">|</li>
+            20.if.value.data = register:count_MENUOBJ
+            20.if.equals = 1
+            20.if.negate = 1
+          }
+        }
+    }
+
+  2 < .1
+  2 {
+    wrap = <ul class="dropdown-menu">|</ul>
+
+  }
+    wrap (
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+            <span class="sr-only">Navigation umschalten</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img alt="Logo der Günter Kühnlein GmbH" src="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="nav navbar-nav">|</ul>
+        </div>
+      </div>
+    </nav>
+    )
+}

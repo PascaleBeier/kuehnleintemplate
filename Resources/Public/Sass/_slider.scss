@@ -1,0 +1,26 @@
+.slider {
+  @media(max-width: 768px) {
+    min-height: 50vh;
+  }
+  @media(min-width: 768px) {
+    min-height: 500px;
+  }
+  @media (min-width: 1024px) {
+    min-height: 600px;
+  }
+  background: no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .inner {
+      position: absolute;
+      top: 24%;
+    }
+  }
+
+}

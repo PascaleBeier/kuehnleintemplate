@@ -1,0 +1,9 @@
+mainContent = CONTENT
+mainContent {
+    table = tt_content
+    select {
+        pidInList = this
+        begin = 1
+        where = colPos = 0
+    }
+}

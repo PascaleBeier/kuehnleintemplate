@@ -1,0 +1,35 @@
+<f:layout name="Default" />
+
+<f:comment>
+    Dieses Template wird verwendet, wenn kein Backend-Layout ausgewählt ist.
+</f:comment>
+
+<f:section name="Main">
+    <div class="two-column">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="maincontent">
+                    <f:cObject typoscriptObjectPath="mainContent" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <aside>
+                    <f:cObject typoscriptObjectPath="subnav" />
+
+                    <ul class="list-group">
+                        <li class="list-group-item active"><i class="fa fa-download"></i> Downloads</li>
+                    </ul>
+
+                    <f:if condition="{data.uid}==20">
+                        <f:then>
+                            <img src="typo3conf/ext/kuehnleintemplate/Resources/Public/Images/Baubiologisches_Gutachten.jpg">
+                        </f:then>
+                    </f:if>
+
+                </aside>
+            </div>
+        </div>
+    </div>
+    </div>
+</f:section>
