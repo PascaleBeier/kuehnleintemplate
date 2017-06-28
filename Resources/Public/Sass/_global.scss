@@ -124,16 +124,14 @@ body#p20 {
 .dropdown-menu {
   box-shadow: none !important;
   border: 0 !important;
-  li {
-    line-height: 25px;
-  }
+
   a {
-    font-size: .8em;
+    text-transform: none !important;
+    padding: 10px 15px !important;
   }
 }
 
 .nav>li>a {
   padding-left: 5px;
   padding-right: 5px;
-  font-size: .8em;
 }
