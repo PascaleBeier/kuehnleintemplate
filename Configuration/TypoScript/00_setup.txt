@@ -1,5 +1,16 @@
 config.contentObjectExceptionHandler = 0
 config.renderCharset = utf-8
+config.simulateStaticDocuments = 0
+config.tx_realurl_enable = 1
+
+#BASEURL = http://guenter-kuehnlein.de
+#[globalString = ENV:HTTP_HOST=kuehnlein.app]
+#BASEURL = http://kuehnlein.app
+#[globalString = ENV:HTTP_HOST=kuehnlein.kunden-webseiten.de]
+#BASEURL = http://kuehnlein.kunden-webseiten.de
+#[global]
+
+config.baseURL = {$BASEURL}
 
 page = PAGE
 

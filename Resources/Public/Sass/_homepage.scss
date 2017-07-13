@@ -77,9 +77,14 @@
 }
 
 .play-imagefilm {
+
   margin: $spacer * 4 0;
   padding: $spacer * 2 0;
-  background: $navbar-default-bg;
+  @media (min-width: 768px) {
+    padding: $spacer * 12 0;
+  }
+  background: url(../Images/video.jpg) center no-repeat;
+  background-size: cover;
   color: #fff;
   cursor: pointer;
   text-align: center;

@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.options({ processCssUrls: false });
+mix.options({ processCssUrls: false, publicPath: './' });
 
 mix.webpackConfig({
     resolve: {
